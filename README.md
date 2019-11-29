@@ -10,22 +10,19 @@
 - rabbitmq异步任务消费
 
 # 快速使用
-1.本地安装
-	git
-	docker
-	docker-compose
-2.克隆项目
-	```python
-	git clone 
+1. 本地安装
+	- git
+	- docker
+	- docker-compose
+2. 克隆项目
 	```
-3.拷贝并命名配置文件
-	```shell
-	cd crawl
-	cp env.sample .env
-	docker-compose up
+	$ git clone 
+	```
+3. 拷贝并命名配置文件
+	```
+	$ cd crawl
+	$ cp env.sample .env
+	$ docker-compose up
 	```
 
 这时，如果生产者已经准备好，发送消息时，就能执行自动下载图片任务了
-
-
-
