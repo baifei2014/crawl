@@ -16,7 +16,7 @@
 	- docker-compose
 2. 克隆项目
 	```
-	$ git clone 
+	$ git clone git@github.com:baifei2014/crawl.git
 	```
 3. 拷贝并命名配置文件
 	```
