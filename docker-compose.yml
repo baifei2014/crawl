@@ -1,0 +1,22 @@
+version: '3'
+services:
+  django:
+    build: .
+    # command: python manage.py runserver 0.0.0.0:8080
+    command: python manage.py crawl_image
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/usr/src/app:rw
+      - ./requirements.txt:/usr/src/app/requirements.txt:rw
+      - /data/resource/image:/data/resource/image:rw
+    environment:
+      MYSQL_HOST: ${MYSQL_HOST}
+      MYSQL_PORT: ${MYSQL_PORT}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      RABBITMQ_HOST: ${RABBITMQ_HOST}
+      RABBITMQ_PORT: ${RABBITMQ_PORT}
+      RABBITMQ_USER: ${RABBITMQ_USER}
+      RABBITMQ_PASSWORD: ${RABBITMQ_PASSWORD}
+      RABBITMQ_VHOST: ${RABBITMQ_VHOST}
